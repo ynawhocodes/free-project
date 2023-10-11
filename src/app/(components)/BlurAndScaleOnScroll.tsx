@@ -15,6 +15,7 @@ const BlurAndScaleOnScroll: React.FC = () => {
       trigger: container,
       start: "top 1%",
       end: "bottom 0%",
+      toggleActions: 'play none none reverse', 
       onEnter: () => {
         gsap.to(container, {
           duration: 0.5,
