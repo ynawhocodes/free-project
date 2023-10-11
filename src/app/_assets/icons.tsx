@@ -114,8 +114,9 @@ const Example = () => {
 const Sticker = () => {
   return (
     <svg
-      width="281"
-      height="109"
+      className="w-[30%]"
+      // width="281"
+      // height="109"
       viewBox="0 0 281 109"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
