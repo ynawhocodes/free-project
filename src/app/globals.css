@@ -27,6 +27,12 @@ body {
 } */
 
 @layer base {
+  html {
+    @apply h-full bg-black;
+  }
+  body {
+    @apply h-full md:max-w-screen-md mx-auto bg-white;
+  }
   ::selection {
     @apply text-white bg-blue-500;
   }
@@ -43,3 +49,46 @@ body {
   }
 }
 
+@keyframes colorChange {
+  0% {
+    color: black;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.text-animation {
+  animation: colorChange 2s linear infinite;
+}
+
+@keyframes textWaveBlink {
+  0%, 100% {
+    background: linear-gradient(to right, black, transparent, black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* transform: translateX(0); */
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+  /* 25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-10px);
+  } */
+  90%, 95% {
+    opacity: 0;
+  }
+}
+
+.text-animation-gradient {
+  animation: textWaveBlink 2s linear infinite; 
+}
