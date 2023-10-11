@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,17 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+@layer components {
+  .title-lg {
+    @apply text-[30px] tracking-[-.07em] font-myeongjo sm:text-[60px]
+  }
+  .title-md {
+    @apply text-[25px] tracking-[-.075em] font-myeongjo sm:text-[30px]
+  }
+  .content-md {
+    @apply text-[20px] tracking-[-.075em] font-myeongjo leading-[20px]
+  }
 }
+
