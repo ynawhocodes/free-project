@@ -9,6 +9,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ChangeTextColor from "./(components)/ChangeTextColor";
 import EventInfo from "./(components)/EventInfo";
+import TypingText from "./(components)/TypingText";
+import Cursor from "./(components)/Cursor";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,12 +19,14 @@ export default function Home() {
   const textRef1 = useRef(null);
   const textRef2 = useRef(null);
   const textRef3 = useRef(null);
+  const divRef = useRef(null);
 
   useEffect(() => {
     const sharpElement = sharp.current;
     const textElement1 = textRef1.current;
     const textElement2 = textRef2.current;
     const textElement3 = textRef3.current;
+    const divElement = divRef.current;
 
     gsap.set(sharpElement, { opacity: 0, x: "-100%" });
     gsap.set(textElement1, { opacity: 0, x: "-100%" });
@@ -35,8 +39,8 @@ export default function Home() {
       ease: "power4.out",
       scrollTrigger: {
         trigger: sharpElement,
-        start: `top 75%`,
-        end: "bottom 79%",
+        start: `top 50%`,
+        end: "bottom 10%",
         scrub: true,
         // markers: true,
       },
@@ -47,10 +51,9 @@ export default function Home() {
       ease: "power4.out",
       scrollTrigger: {
         trigger: textElement1,
-        start: `top 80%`,
-        end: "bottom 83%",
+        start: `top 60%`,
+        end: "bottom 20%",
         scrub: true,
-        // markers: true,
       },
     });
     gsap.to(textElement2, {
@@ -59,10 +62,9 @@ export default function Home() {
       ease: "power4.out",
       scrollTrigger: {
         trigger: textElement2,
-        start: `top 83%`,
-        end: "bottom 86%",
+        start: `top center`,
+        end: "bottom 23%",
         scrub: true,
-        // markers: true,
       },
     });
     gsap.to(textElement3, {
@@ -71,25 +73,34 @@ export default function Home() {
       ease: "power4.out",
       scrollTrigger: {
         trigger: textElement3,
-        start: `top 87%`,
-        end: "bottom 90%",
+        start: `top 67%`,
+        end: "bottom 27%",
+        scrub: true,
+      },
+    });
+
+    gsap.to(divElement, {
+      scrollTrigger: {
+        trigger: divElement,
+        start: "top 80%",
+        end: "bottom center",
         scrub: true,
         // markers: true,
       },
+      rotation: 360,
+      duration: 1,
     });
   }, []);
 
   return (
-    <main className="h-full bg-black">
-      <div className="md:max-w-screen-md mx-auto bg-white cursor-pointer">
-        <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-          <BlurAndScaleOnScroll />
-        </div>
-        <div className="relative h-[200vh]">
+    <main className="h-full">
+      <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+        <BlurAndScaleOnScroll />
+      </div>
+      <div className="bg-white">
+        <div className="relative h-[100vh]">
           <div className="flex justify-center items-center h-screen sticky top-0">
-            <p className="sticky top-0 title-lg py-[10%]">
-              Spread your wide wing
-            </p>
+            <TypingText to="Spread your wide wing" from="SPREAD YOUR WIDE WING" />
           </div>
         </div>
         <div className="relative">
@@ -103,18 +114,19 @@ export default function Home() {
             <div className="flex justify-center pb-[10%]" ref={textRef2}>
               <p className="title-md">something great will come out</p>
             </div>
-            <div className="flex justify-center py-[15%]" ref={textRef3}>
+            <div
+              className="flex justify-center pb-[20%] mt-[60%]"
+              ref={textRef3}
+            >
               <p className="title-md">&lsquo;Cause you&rsquo;re a genius</p>
             </div>
             <RedLabel />
           </div>
         </div>
-        <div className="flex justify-center items-center relative h-screen">
-          <p className="z-10 title-md text-center mt-10 sticky top-0 py-5">
-            (Mail) contact@01.works
-          </p>
-        </div>
-       <EventInfo/>
+        {/* <div className="flex justify-center items-center relative h-screen"> */}
+        <ChangeTextColor text="(Mail) contact@01.works" />
+        {/* </div> */}
+        <EventInfo />
         <div className="h-screen py-10 relative">
           <div className="flex sticky top-0">
             <div className="pt-10 pl-1">
@@ -122,12 +134,14 @@ export default function Home() {
             </div>
             <div className="flex-1"></div>
           </div>
-          <ChangeTextColor text="Example 결과물 보러가기" />
         </div>
-        <div className="h-screen  bg-black flex justify-center items-center z-20 relative">
-          <Sticker />
+        <div className="h-screen bg-black flex justify-center items-center z-20 relative">
+          <div className="flex justify-center w-full" ref={divRef}>
+            <Sticker />
+          </div>
         </div>
       </div>
+      {/* <Cursor/> */}
     </main>
   );
 }
