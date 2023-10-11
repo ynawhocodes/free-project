@@ -26,6 +26,11 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
+@layer base {
+  ::selection {
+    @apply text-white bg-blue-500;
+  }
+}
 @layer components {
   .title-lg {
     @apply text-[30px] tracking-[-.07em] font-myeongjo sm:text-[60px]
