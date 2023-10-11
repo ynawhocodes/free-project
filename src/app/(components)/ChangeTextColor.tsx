@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,14 +12,14 @@ const ChangeTextColor: React.FC<{ text: string }> = ({ text }) => {
 
     if (textElement) {
       gsap.to(textElement, {
-        color: 'black',
-        ease: 'linear',
+        color: "black",
+        ease: "linear",
         scrollTrigger: {
           trigger: textElement,
-          start: 'top center',
-          end: 'bottom center',
+          start: "top center",
+          end: "bottom center",
           scrub: true,
-          toggleActions: 'play none none reverse', 
+          toggleActions: "play none none reverse",
           // markers: true,
         },
       });
@@ -27,10 +27,10 @@ const ChangeTextColor: React.FC<{ text: string }> = ({ text }) => {
   }, []);
 
   return (
-    <div className="h-screen flex items-center justify-center text-white">
+    <div className="flex justify-center items-center relative h-screen">
       <div
         ref={textRef}
-        className="content-md"
+        className="z-10 title-lg text-center mt-10 sticky top-0 py-5 text-[#ff0000]"
       >
         {text}
       </div>

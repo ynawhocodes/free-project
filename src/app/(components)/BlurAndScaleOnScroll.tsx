@@ -45,7 +45,7 @@ const BlurAndScaleOnScroll: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className=""
+      className="w-full"
       style={{
         // transition: "filter 0.5s, transform 0.5s",
         display: "inline-block",
