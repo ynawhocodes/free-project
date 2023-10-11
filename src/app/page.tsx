@@ -85,7 +85,7 @@ export default function Home() {
               <p className="title-md">something great will come out</p>
             </div>
             <div className="flex justify-center py-[15%]" ref={textRef3}>
-              <p className="title-md">'Cause you're a genius</p>
+              <p className="title-md">&lsquo;Cause you&rsquo;re a genius</p>
             </div>
             <RedLabel />
           </div>
@@ -102,7 +102,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <p className="p-10 text-[13px] md:text-[20px]">
-                Event | 영원(FREE) 이벤트 웹 개발 스튜디오, 영원입니다.
+                Event | 영원(FREE) 이벤트 웹 개발 스튜디오&apos; 영원입니다.
                 <br />
                 10월의 월간프로젝트로 디자이너와 협업 프로젝트를 진행하려고
                 합니다.
@@ -112,15 +112,15 @@ export default function Home() {
                 <br />
                 참가비용 및 인원 | 무료 (1명)
                 <br />
-                선발방식 및 기간 | 추첨, ~2023/10/20 23:59
+                선발방식 및 기간 | 추첨&apos; ~2023/10/20 23:59
                 <br />
-                참여조건 | 영원 인스타그램(@01.works) 팔로우, 해당 게시글
+                참여조건 | 영원 인스타그램(@01.works) 팔로우&apos; 해당 게시글
                 스토리로 공유
                 <br />
                 참여방법 | “[이벤트 지원] - ❍❍❍(이름)”를 제목으로
                 첨부파일(자유양식)과 함께 contact@01.work로 이메일 발송
                 <br />
-                첨부파일 필수내용 | 화면설계서 또는 디자인 산출물(figma), 자세한
+                첨부파일 필수내용 | 화면설계서 또는 디자인 산출물(figma)&apos; 자세한
                 내용과 예시는 https://free.yangnawon.com 참고
                 <br />
                 발표 | 2023/10/21 개인 메일로 전달
@@ -141,7 +141,7 @@ export default function Home() {
                 웹 사이트 배포를 원할 경우 도메인과 호스팅 비용은 개인
                 부담입니다.
                 <br />
-                (사용 기한, 주인 명시)
+                (사용 기한&apos; 주인 명시)
                 <br />
                 <br />
                 자세한 문의는 contact@01.works 또는 Instagram DM으로

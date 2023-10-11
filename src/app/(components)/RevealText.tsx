@@ -18,7 +18,7 @@ const RevealText: React.FC<{ text: string, start: number }> = ({ text, start }) 
       ease: "power4.out",
       scrollTrigger: {
         trigger: textElement,
-        start: `top ${start}%`,
+        start: "top top",
         end: "center center",
         scrub: true,
         markers: true,
