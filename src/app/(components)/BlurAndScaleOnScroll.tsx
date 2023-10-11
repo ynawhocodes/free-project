@@ -13,29 +13,30 @@ const BlurAndScaleOnScroll: React.FC = () => {
 
     ScrollTrigger.create({
       trigger: container,
-      start: "top 1%",
-      end: "bottom 0%",
+      start: "bottom center",
+      end: "+=1000",
       toggleActions: 'play none none reverse', 
+      // markers: true,
       onEnter: () => {
         gsap.to(container, {
-          duration: 0.5,
+          // duration: 0.5,
           scale: 1,
-          ease: Power0.easeNone,
+          // ease: Power0.easeNone,
           onComplete: () => {
             gsap.to(container, {
-              duration: 0.5,
+              // duration: 5.5,
               filter: "blur(5px)",
-              ease: Power0.easeNone,
+              // ease: Power0.easeNone,
             });
           },
         });
       },
       onLeaveBack: () => {
         gsap.to(container, {
-          duration: 3.5,
+          // duration: 3.5,
           scale: 0.2,
           filter: "blur(0px)",
-          ease: Power0.easeNone,
+          // ease: Power0.easeNone,
         });
       },
     });
@@ -46,7 +47,7 @@ const BlurAndScaleOnScroll: React.FC = () => {
       ref={containerRef}
       className=""
       style={{
-        transition: "filter 0.5s, transform 0.5s",
+        // transition: "filter 0.5s, transform 0.5s",
         display: "inline-block",
         transformOrigin: "center center",
         transform: "scale(0.2)",

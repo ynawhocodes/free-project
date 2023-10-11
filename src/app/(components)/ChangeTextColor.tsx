@@ -16,21 +16,21 @@ const ChangeTextColor: React.FC<{ text: string }> = ({ text }) => {
         ease: 'linear',
         scrollTrigger: {
           trigger: textElement,
-          start: 'top 10%',
+          start: 'top center',
           end: 'bottom center',
           scrub: true,
           toggleActions: 'play none none reverse', 
-          markers: true,
+          // markers: true,
         },
       });
     }
   }, []);
 
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div className="h-screen flex items-center justify-center text-white">
       <div
         ref={textRef}
-        className="title-lg"
+        className="content-md"
       >
         {text}
       </div>
