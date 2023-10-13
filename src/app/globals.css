@@ -28,7 +28,7 @@ body {
 
 @layer base {
   html {
-    @apply h-full bg-black;
+    @apply h-full bg-white;
   }
   body {
     @apply h-full md:max-w-screen-md mx-auto bg-white;
