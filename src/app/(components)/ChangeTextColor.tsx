@@ -27,13 +27,14 @@ const ChangeTextColor: React.FC<{ text: string }> = ({ text }) => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center relative h-screen">
-      <div
+    <div className="flex justify-center items-center relative h-full">
+      <a
+        className="z-10 title-lg text-center mt-10 sticky top-0 py-5 text-[#ff0000] underline"
         ref={textRef}
-        className="z-10 title-lg text-center mt-10 sticky top-0 py-5 text-[#ff0000]"
+        href={"mailto:01.works"}
       >
         {text}
-      </div>
+      </a>
     </div>
   );
 };
