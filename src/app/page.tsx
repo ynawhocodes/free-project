@@ -11,6 +11,7 @@ import ChangeTextColor from "./(components)/ChangeTextColor";
 import EventInfo from "./(components)/EventInfo";
 import TypingText from "./(components)/TypingText";
 import Cursor from "./(components)/Cursor";
+import ExamplePage from "./_assets/example";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,9 +98,9 @@ export default function Home() {
       <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
         <BlurAndScaleOnScroll />
       </div>
-      <div className="bg-white">
+      <div className="h-full">
         <div className="relative h-[100vh]">
-          <div className="flex justify-center items-center h-screen sticky top-0">
+          <div className="flex justify-center items-center h-full sticky top-0">
             <TypingText to="Spread your wide wing" from="SPREAD YOUR WIDE WING" />
           </div>
         </div>
@@ -123,25 +124,29 @@ export default function Home() {
             <RedLabel />
           </div>
         </div>
-        {/* <div className="flex justify-center items-center relative h-screen"> */}
+        {/* <div className="flex justify-center items-center relative h-full"> */}
         <ChangeTextColor text="(Mail) contact@01.works" />
         {/* </div> */}
         <EventInfo />
-        <div className="h-screen py-10 relative">
+        <div className="h-full py-10 relative">
           <div className="flex sticky top-0">
             <div className="pt-10 pl-1">
+              <div className="border-1">
               <Example />
+              </div>
             </div>
-            <div className="flex-1"></div>
+            <div className="flex-1">
+              <ExamplePage/>
+            </div>
           </div>
         </div>
-        <div className="h-screen bg-black flex justify-center items-center z-20 relative">
+        <div className="h-full bg-black flex justify-center items-center z-20 relative">
           <div className="flex justify-center w-full" ref={divRef}>
             <Sticker />
           </div>
         </div>
       </div>
-      {/* <Cursor/> */}
+      <Cursor/>
     </main>
   );
 }
