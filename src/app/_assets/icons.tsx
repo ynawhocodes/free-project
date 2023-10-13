@@ -135,4 +135,25 @@ const Sticker = () => {
   );
 };
 
-export { BlurStar, Star, Sharp, How, Example, Sticker };
+const PinkStar = () => {
+  return (
+    <svg
+      className="w-full"
+      // width="156"
+      // height="151"
+      viewBox="0 0 156 151"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M77.6358 0L86.4193 66.5572L155.272 75.0479L86.4193 83.5386L77.6358 150.096L68.8523 83.5386L0 75.0479L68.8523 66.5572L77.6358 0Z"
+        // fill="#FF83FA"
+        fill="#00761A"
+      />
+    </svg>
+  );
+};
+
+export default PinkStar;
+
+export { BlurStar, Star, Sharp, How, Example, Sticker, PinkStar };
