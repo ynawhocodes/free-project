@@ -75,9 +75,9 @@ const ExamplePage = () => {
           width="477.625"
           height="307.527"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -97,14 +97,14 @@ const ExamplePage = () => {
           y2="800.644"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.161458" stop-color="white" stop-opacity="0.53" />
-          <stop offset="0.302083" stop-color="white" />
-          <stop offset="0.421875" stop-color="white" stop-opacity="0.56" />
-          <stop offset="0.526042" stop-color="white" />
-          <stop offset="0.645833" stop-color="white" />
-          <stop offset="0.78125" stop-color="white" stop-opacity="0.42" />
-          <stop offset="0.942708" stop-color="white" />
+          <stop stopColor="white" />
+          <stop offset="0.161458" stopColor="white" stopOpacity="0.53" />
+          <stop offset="0.302083" stopColor="white" />
+          <stop offset="0.421875" stopColor="white" stopOpacity="0.56" />
+          <stop offset="0.526042" stopColor="white" />
+          <stop offset="0.645833" stopColor="white" />
+          <stop offset="0.78125" stopColor="white" stopOpacity="0.42" />
+          <stop offset="0.942708" stopColor="white" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_953_495"
@@ -114,14 +114,14 @@ const ExamplePage = () => {
           y2="809.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.15625" stop-color="white" stop-opacity="0.53" />
-          <stop offset="0.302083" stop-color="white" />
-          <stop offset="0.458333" stop-color="white" stop-opacity="0.56" />
-          <stop offset="0.609375" stop-color="white" />
-          <stop offset="0.744792" stop-color="white" stop-opacity="0.54" />
-          <stop offset="0.864583" stop-color="white" />
-          <stop offset="1" stop-color="white" />
+          <stop stopColor="white" />
+          <stop offset="0.15625" stopColor="white" stopOpacity="0.53" />
+          <stop offset="0.302083" stopColor="white" />
+          <stop offset="0.458333" stopColor="white" stopOpacity="0.56" />
+          <stop offset="0.609375" stopColor="white" />
+          <stop offset="0.744792" stopColor="white" stopOpacity="0.54" />
+          <stop offset="0.864583" stopColor="white" />
+          <stop offset="1" stopColor="white" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_953_495"
@@ -131,8 +131,8 @@ const ExamplePage = () => {
           y2="800"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.895833" stop-color="white" stop-opacity="0.57" />
+          <stop stopColor="white" />
+          <stop offset="0.895833" stopColor="white" stopOpacity="0.57" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_953_495"
@@ -142,8 +142,8 @@ const ExamplePage = () => {
           y2="816"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.895833" stop-color="white" stop-opacity="0.57" />
+          <stop stopColor="white" />
+          <stop offset="0.895833" stopColor="white" stopOpacity="0.57" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_953_495"
@@ -153,8 +153,8 @@ const ExamplePage = () => {
           y2="831"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.895833" stop-color="white" stop-opacity="0.57" />
+          <stop stopColor="white" />
+          <stop offset="0.895833" stopColor="white" stopOpacity="0.57" />
         </linearGradient>
       </defs>
     </svg>
