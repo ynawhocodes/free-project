@@ -19,10 +19,10 @@ const TypingText = ({ from, to }: { from: string; to: string }) => {
       delay: 1,
       scrollTrigger: {
         trigger: textElement,
-        start: "bottom center",
+        start: "bottom 45%",
         end: "center top",
         scrub: true,
-        // markers: true,
+        markers: true,
       },
     });
   }, []);
