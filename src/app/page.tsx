@@ -119,7 +119,7 @@ export default function Home() {
       scrollTrigger: {
         trigger: divElement,
         start: "top 60%",
-        end: "top center",
+        end: "center 55%",
         scrub: true,
         // markers: true,
       },
