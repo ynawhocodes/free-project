@@ -114,7 +114,7 @@ const Example = () => {
 const Sticker = () => {
   return (
     <svg
-      className="w-[30%]"
+      className="w-[30%] rotate-45"
       // width="281"
       // height="109"
       viewBox="0 0 281 109"
@@ -147,8 +147,8 @@ const PinkStar = () => {
     >
       <path
         d="M77.6358 0L86.4193 66.5572L155.272 75.0479L86.4193 83.5386L77.6358 150.096L68.8523 83.5386L0 75.0479L68.8523 66.5572L77.6358 0Z"
-        // fill="#FF83FA"
-        fill="#00761A"
+        fill="#FF83FA"
+        // fill="#00761A"
       />
     </svg>
   );
