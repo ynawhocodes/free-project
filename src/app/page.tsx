@@ -5,7 +5,7 @@ import { How, Sharp, Star, Sticker, Example } from "./_assets/icons";
 import BlurAndScaleOnScroll from "./(components)/BlurAndScaleOnScroll";
 import RevealText from "./(components)/RevealText";
 import RedLabel from "./(components)/RedLabel";
-import gsap from "gsap";
+import { gsap, Power0 } from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ChangeTextColor from "./(components)/ChangeTextColor";
 import TypingText from "./(components)/TypingText";
@@ -35,21 +35,40 @@ export default function Home() {
     const topBoxElement = topBoxRef.current;
     const bottomBoxElement = bottomBoxRef.current;
 
+    // gsap.set(topBoxRef, { flexBasis: '40%' });
+    gsap.set(bottomBoxRef, { flexBasis: '40%' });
     gsap.set(sharpElement, { opacity: 0, x: "-100%" });
     gsap.set(textElement1, { opacity: 0, x: "-100%" });
     gsap.set(textElement2, { opacity: 0, x: "-100%" });
     gsap.set(textElement3, { opacity: 0, x: "-100%" });
 
     gsap.to(topBoxElement, {
-      height: 0,
       scrollTrigger: {
         trigger: topBoxElement,
-        start: "80% center",
-        end: "center top",
+        start: "bottom top",
+        end: "+=100 top",
         scrub: true,
+        onUpdate: (self) => {
+          const value = self.progress * 100 + 60;
+          // gsap.to(topBoxElement, { duration: 1, flexBasis: `${100 - value}%`, ease: Power0.easeNone });
+          gsap.to(topBoxElement, { duration: 1, flexBasis: `${100 - value < 10 ? 0: 100 - value}%`});
+        },
+        // markers: true,
       },
     });
-
+    gsap.to(bottomBoxElement, {
+      scrollTrigger: {
+        trigger: bottomBoxElement,
+        start: "top 20%",
+        end: "bottom 40%",
+        scrub: true,
+        onUpdate: (self) => {
+          const value = self.progress * 100 + 60 ;
+          gsap.to(bottomBoxElement, { duration: 1, flexBasis: `${100 - value < 10 ? 0: 100 - value}%`});
+        },
+        // markers: true,
+      },
+    });
     gsap.to(sharpElement, {
       opacity: 1,
       x: "0%",
@@ -109,25 +128,25 @@ export default function Home() {
     });
   }, []);
 
-  const { scrollY } = useScroll();
-  const height = window.innerHeight;
+  // const { scrollY } = useScroll();
+  // const height = window.innerHeight;
 
   // console.log(scrollY, height, ((height - scrollY) / height) * 100);
-  console.log(((height - scrollY) / height) * 100 > 0 ? ((height - scrollY) / height) * 100 : 0);
+  // console.log(((height - scrollY) / height) * 100 > 0 ? ((height - scrollY) / height) * 100 : 0);
 
   return (
     <main className="h-full">
       <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
         <BlurAndScaleOnScroll />
       </div>
-      <div className="relative h-[300vh]">
-        {/* <div className="bg-black/50 w-full h-[20%] sticky top-0 z-50"></div> */}
-        {/* <div className="bg-black/50 w-full h-[20%] sticky bottom-[50%] z-50"></div> */}
+      <div className="relative h-[150%]">
+        {/* <div className="bg-black w-full h-[20%] sticky top-0 z-50"></div> */}
+        {/* <div className="bg-black w-full h-[20%] sticky bottom-[50%] z-50"></div> */}
         <div className="flex justify-center h-full sticky top-0">
           {/* <div
             className="w-full bg-black absolute"
             style={{ height: "50%" }}
-            ref={topBoxRef}
+            ref={boxRef}
           ></div> */}
 
           <TypingText from="SPREAD YOUR WIDE WING" to="Spread your wide wing" />
@@ -137,16 +156,18 @@ export default function Home() {
           // ref={bottomBoxRef}
         >
           <div
-            className="bg-black/50 w-full"
+            className="bg-black w-full"
             style={{
-              flexBasis: `${((height - scrollY) / height) * 100 > 0 ? ((height - scrollY) / height) * 100 : 0}%`,
+              flexBasis: '40%',
             }}
+            ref={topBoxRef}
           ></div>
           <div
-            className="bg-black/50 w-full"
+            className="bg-black w-full"
             style={{
-              flexBasis: `${((height - scrollY) / height) * 100 > 0 ? ((height - scrollY) / height) * 100 : 0}%`,
+              flexBasis: '40%',
             }}
+            ref={bottomBoxRef}
           ></div>
         </div>
       </div>
