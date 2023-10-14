@@ -13,7 +13,7 @@ const BlurAndScaleOnScroll: React.FC = () => {
 
     ScrollTrigger.create({
       trigger: container,
-      start: "bottom center",
+      start: "bottom top",
       end: "+=1000",
       toggleActions: 'play none none reverse', 
       // markers: true,
