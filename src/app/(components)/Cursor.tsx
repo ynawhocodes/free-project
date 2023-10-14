@@ -37,7 +37,7 @@ const Cursor = () => {
         })} */}
       <div
         className={`fixed w-[140px] z-50 pointer-events-none transition-transform duration-200 ease-in-out ${
-          isClicked && "scale-150"
+          isClicked && "scale-150 mix-blend-difference"
         }`}
         style={{
           left: `${x - 50}px`,
