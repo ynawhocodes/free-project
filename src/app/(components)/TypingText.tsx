@@ -19,16 +19,16 @@ const TypingText = ({ from, to }: { from: string; to: string }) => {
       delay: 1,
       scrollTrigger: {
         trigger: textElement,
-        start: "80% center",
+        start: "bottom center",
         end: "center top",
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     });
   }, []);
 
   return (
-    <div className="sticky top-0 pt-[85%] pb-[10%] text-center h-fit">
+    <div className="sticky top-1/2 py-[10%] -translate-y-1/2 text-center h-fit">
       <p className="title-lg" ref={textRef}>
         {from}
       </p>
