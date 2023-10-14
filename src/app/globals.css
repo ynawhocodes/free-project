@@ -39,10 +39,10 @@ body {
 }
 @layer components {
   .title-lg {
-    @apply text-[30px] tracking-[-.07em] font-myeongjo sm:text-[60px]
+    @apply text-[35px] tracking-[-.07em] font-myeongjo sm:text-[60px]
   }
   .title-md {
-    @apply text-[25px] tracking-[-.075em] font-myeongjo sm:text-[30px]
+    @apply text-[25px] tracking-[-.075em] font-myeongjo sm:text-[45px]
   }
   .content-md {
     @apply text-[20px] tracking-[-.075em] font-myeongjo leading-[20px]
