@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 const TypingText = ({ from, to }: { from: string; to: string }) => {
   const textRef = useRef(null);
 
-
   useEffect(() => {
     const textElement = textRef.current;
 
