@@ -97,14 +97,14 @@ const ExamplePage = () => {
           y2="800.644"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="white" />
-          <stop offset="0.161458" stopColor="white" stopOpacity="0.53" />
-          <stop offset="0.302083" stopColor="white" />
-          <stop offset="0.421875" stopColor="white" stopOpacity="0.56" />
-          <stop offset="0.526042" stopColor="white" />
-          <stop offset="0.645833" stopColor="white" />
-          <stop offset="0.78125" stopColor="white" stopOpacity="0.42" />
-          <stop offset="0.942708" stopColor="white" />
+          <stop />
+          <stop offset="0.161458" stopOpacity="0.53" />
+          <stop offset="0.302083" />
+          <stop offset="0.421875" stopOpacity="0.56" />
+          <stop offset="0.526042" />
+          <stop offset="0.645833" />
+          <stop offset="0.78125" stopOpacity="0.42" />
+          <stop offset="0.942708" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_953_495"
@@ -114,14 +114,14 @@ const ExamplePage = () => {
           y2="809.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="white" />
-          <stop offset="0.15625" stopColor="white" stopOpacity="0.53" />
-          <stop offset="0.302083" stopColor="white" />
-          <stop offset="0.458333" stopColor="white" stopOpacity="0.56" />
-          <stop offset="0.609375" stopColor="white" />
-          <stop offset="0.744792" stopColor="white" stopOpacity="0.54" />
-          <stop offset="0.864583" stopColor="white" />
-          <stop offset="1" stopColor="white" />
+          <stop />
+          <stop offset="0.15625" stopOpacity="0.53" />
+          <stop offset="0.307292" />
+          <stop offset="0.458333" stopOpacity="0.56" />
+          <stop offset="0.609375" />
+          <stop offset="0.744792" stopOpacity="0.54" />
+          <stop offset="0.864583" />
+          <stop offset="1" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_953_495"
@@ -131,8 +131,8 @@ const ExamplePage = () => {
           y2="800"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="white" />
-          <stop offset="0.895833" stopColor="white" stopOpacity="0.57" />
+          <stop />
+          <stop offset="0.895833" stopOpacity="0.57" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_953_495"
@@ -142,8 +142,8 @@ const ExamplePage = () => {
           y2="816"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="white" />
-          <stop offset="0.895833" stopColor="white" stopOpacity="0.57" />
+          <stop />
+          <stop offset="0.895833" stopOpacity="0.57" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_953_495"
@@ -153,8 +153,8 @@ const ExamplePage = () => {
           y2="831"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="white" />
-          <stop offset="0.895833" stopColor="white" stopOpacity="0.57" />
+          <stop />
+          <stop offset="0.895833" stopOpacity="0.57" />
         </linearGradient>
       </defs>
     </svg>
