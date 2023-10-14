@@ -22,6 +22,7 @@ const TypingText = ({ from, to }: { from: string; to: string }) => {
         start: "80% center",
         end: "center top",
         scrub: true,
+        markers: true,
       },
     });
   }, []);

@@ -112,14 +112,15 @@ export default function Home() {
   const { scrollY } = useScroll();
   const height = window.innerHeight;
 
-  console.log(scrollY, height, ((height - scrollY) / height) * 100);
+  // console.log(scrollY, height, ((height - scrollY) / height) * 100);
+  console.log(((height - scrollY) / height) * 100 > 0 ? ((height - scrollY) / height) * 100 : 0);
 
   return (
     <main className="h-full">
       <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
         <BlurAndScaleOnScroll />
       </div>
-      <div className="relative h-[200vh]">
+      <div className="relative h-[300vh]">
         {/* <div className="bg-black/50 w-full h-[20%] sticky top-0 z-50"></div> */}
         {/* <div className="bg-black/50 w-full h-[20%] sticky bottom-[50%] z-50"></div> */}
         <div className="flex justify-center h-full sticky top-0">
@@ -128,27 +129,25 @@ export default function Home() {
             style={{ height: "50%" }}
             ref={topBoxRef}
           ></div> */}
+
+          <TypingText from="SPREAD YOUR WIDE WING" to="Spread your wide wing" />
+        </div>
+        <div
+          className={`fixed inset-0 flex flex-col justify-between`}
+          // ref={bottomBoxRef}
+        >
           <div
-            className={`fixed inset-0 flex flex-col justify-evenly`}
-            // ref={bottomBoxRef}
-          >
-            <div
-              className="bg-black w-full"
-              style={{
-                flexBasis: `${((height - scrollY) / height) * 100}%`,
-              }}
-            ></div>
-            <TypingText
-              from="SPREAD YOUR WIDE WING"
-              to="Spread your wide wing"
-            />
-            <div
-              className="bg-black w-full"
-              style={{
-                flexBasis: `${((height - scrollY) / height) * 100}%`,
-              }}
-            ></div>
-          </div>
+            className="bg-black/50 w-full"
+            style={{
+              flexBasis: `${((height - scrollY) / height) * 100 > 0 ? ((height - scrollY) / height) * 100 : 0}%`,
+            }}
+          ></div>
+          <div
+            className="bg-black/50 w-full"
+            style={{
+              flexBasis: `${((height - scrollY) / height) * 100 > 0 ? ((height - scrollY) / height) * 100 : 0}%`,
+            }}
+          ></div>
         </div>
       </div>
       <div className="relative">
