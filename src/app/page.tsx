@@ -5,7 +5,7 @@ import { How, Sharp, Star, Sticker, Example } from "./_assets/icons";
 import BlurAndScaleOnScroll from "./(components)/BlurAndScaleOnScroll";
 import RevealText from "./(components)/RevealText";
 import RedLabel from "./(components)/RedLabel";
-import { gsap, Power0 } from 'gsap';
+import { gsap, Power0 } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ChangeTextColor from "./(components)/ChangeTextColor";
 import TypingText from "./(components)/TypingText";
@@ -18,6 +18,11 @@ import { useScroll } from "./_hooks/useScroll";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const sharp = useRef(null);
   const textRef1 = useRef(null);
   const textRef2 = useRef(null);
@@ -36,7 +41,7 @@ export default function Home() {
     const bottomBoxElement = bottomBoxRef.current;
 
     // gsap.set(topBoxRef, { flexBasis: '40%' });
-    gsap.set(bottomBoxRef, { flexBasis: '40%' });
+    gsap.set(bottomBoxRef, { flexBasis: "40%" });
     gsap.set(sharpElement, { opacity: 0, x: "-100%" });
     gsap.set(textElement1, { opacity: 0, x: "-100%" });
     gsap.set(textElement2, { opacity: 0, x: "-100%" });
@@ -51,7 +56,10 @@ export default function Home() {
         onUpdate: (self) => {
           const value = self.progress * 100 + 60;
           // gsap.to(topBoxElement, { duration: 1, flexBasis: `${100 - value}%`, ease: Power0.easeNone });
-          gsap.to(topBoxElement, { duration: 1, flexBasis: `${100 - value < 10 ? 0: 100 - value}%`});
+          gsap.to(topBoxElement, {
+            duration: 1,
+            flexBasis: `${100 - value < 10 ? 0 : 100 - value}%`,
+          });
         },
         // markers: true,
       },
@@ -63,8 +71,11 @@ export default function Home() {
         end: "bottom 40%",
         scrub: true,
         onUpdate: (self) => {
-          const value = self.progress * 100 + 60 ;
-          gsap.to(bottomBoxElement, { duration: 1, flexBasis: `${100 - value < 10 ? 0: 100 - value}%`});
+          const value = self.progress * 100 + 60;
+          gsap.to(bottomBoxElement, {
+            duration: 1,
+            flexBasis: `${100 - value < 10 ? 0 : 100 - value}%`,
+          });
         },
         // markers: true,
       },
@@ -158,14 +169,14 @@ export default function Home() {
           <div
             className="bg-black w-full"
             style={{
-              flexBasis: '40%',
+              flexBasis: "40%",
             }}
             ref={topBoxRef}
           ></div>
           <div
             className="bg-black w-full"
             style={{
-              flexBasis: '40%',
+              flexBasis: "40%",
             }}
             ref={bottomBoxRef}
           ></div>
