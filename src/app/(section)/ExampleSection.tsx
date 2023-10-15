@@ -28,7 +28,7 @@ const ExampleSection = () => {
     const textElement7= textRef7.current;
 
     gsap.to(textElement1, {
-      text: `1) 시작할 땐 중앙 문구 위 아래로<br/>검은 막이 열리는 효과가 있었으면 좋겠습니다.`,
+      text: `1) 시작할 땐 중앙 문구 위 아래로<br/>검은 막이 열리는 효과가 있었으면 좋겠습니다. (스크롤에 반응)`,
       duration: 2,
       delay: 1,
       scrollTrigger: {
@@ -52,7 +52,7 @@ const ExampleSection = () => {
       },
     });
     gsap.to(textElement3, {
-      text: `3) 하늘색 별은 작아졌다가 커지며,<br/>커진 후 블러효과가 유지됐으면 좋겠어요.`,
+      text: `3) 앞 효과와 함께 하늘색 별은 작아졌다가 커지며,<br/>커진 후 블러효과가 유지됐으면 좋겠어요.`,
       duration: 2,
       delay: 1,
       scrollTrigger: {
@@ -64,7 +64,7 @@ const ExampleSection = () => {
       },
     });
     gsap.to(textElement4, {
-      text: `4) PC 버전에서는 마우스에 해당 핑크 별이 커서를 따라다녔으면 좋겠어요.<br/>클릭하면 별이 커지고 difference 효과가 있었으면 좋겠습니다!`,
+      text: `4) PC 버전에서는 마우스에 해당 핑크 별이 커서를 따라다녔으면 좋겠어요.<br/>클릭하면 별이 커지고 difference 효과가 있었으면 좋겠습니다.`,
       duration: 2,
       delay: 1,
       scrollTrigger: {
@@ -76,7 +76,7 @@ const ExampleSection = () => {
       },
     });
     gsap.to(textElement5, {
-      text: `5) 연두 화살표, 그리고 두 문구는 세로로 화면 중앙에 위치할 경우<br/>왼쪽에서 오른쪽으로 fade in 됐으면 좋겠습니다.`,
+      text: `5) 연두 화살표, 그리고 두 문구는<br/>왼쪽에서 오른쪽으로 fade in 됐으면 좋겠습니다.`,
       duration: 2,
       delay: 1,
       scrollTrigger: {
@@ -88,7 +88,7 @@ const ExampleSection = () => {
       },
     });
     gsap.to(textElement6, {
-      text: `6) 빨강 띠는 무한으로 롤링됐으면 좋겠고,<br/>문구들이 약하게 반짝 반짝거렸으면 좋겠습니다.`,
+      text: `6) 빨강 띠는 가로로 무한 롤링됐으면 좋겠고,<br/>문구들이 약하게 반짝 반짝거렸으면 좋겠습니다.`,
       duration: 2,
       delay: 1,
       scrollTrigger: {
@@ -100,7 +100,7 @@ const ExampleSection = () => {
       },
     });
     gsap.to(textElement7, {
-      text: `- 예시는 가장 간단하게 적은 것이므로 정확한 구현을 원하실 경우 자세한 설명이 필요합니다.<br/>(ex. 그림, 영상, 프로토타입 등 자세하게 설명해 주실수록 구현은 정확해집니다.)<br/>- Figma로 전달해주시는 게 가장 좋으며, Figma로 전달이 어려울 경우 재료가 될 모든 파일이 필요합니다.<br/>- 궁금한 사항은 contact@01.works 또는 Instagram DM으로 부탁드립니다.`,
+      text: `- 위는 최소한의 예시이므로 정확한 구현을 원하실 경우 더 자세한 설명이 필요합니다.<br/>(ex. 그림, 영상, 프로토타입 등 디테일한 인터렉션 설명이 존재해야 예상과 동일한 구현이 가능합니다.)<br/>- Figma 링크 혹은 파일이 필요하며, 전달이 어려울 경우 모든 소스 파일이 필요합니다.<br/>- 궁금한 사항은 contact@01.works 또는 Instagram DM으로 부탁드립니다.`,
       duration: 2,
       delay: 1,
       scrollTrigger: {
@@ -113,15 +113,15 @@ const ExampleSection = () => {
     });
   }, []);
   return (
-    <div className="h-[200vh] pb-10 relative pt-[50%]">
-      <div className="flex sticky top-1/2 -translate-y-1/2">
+    <div className="h-[200vh] pb-10 relative pt-[60%]">
+      <div className="flex sticky top-1/2 -translate-y-[60%]">
         <div className="pt-10 pl-1">
           <Example />
         </div>
         <div className="flex-1 flex justify-center pt-10 relative">
           {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div> */}
           <ExamplePage />
-          <div className="absolute top-6%]">
+          <div className="absolute top-[6%]">
             <p className="text-[#FF0000] caption" ref={textRef1}>1)</p>
           </div>
           <div className="absolute top-[25%] left-[5%]">
@@ -130,7 +130,7 @@ const ExampleSection = () => {
           <div className="absolute top-[40%] left-[50%]">
             <p className="text-[#FF0000] caption" ref={textRef3}>3)</p>
           </div>
-          <div className="absolute top-[58%] left-[55%]">
+          <div className="absolute top-[58%] left-[41%]">
             <p className="text-[#FF0000] caption" ref={textRef4}>4)</p>
           </div>
           <div className="absolute top-[83%] left-[-5%]">
@@ -139,7 +139,7 @@ const ExampleSection = () => {
           <div className="absolute top-[101%] left-[48%]">
             <p className="text-[#FF0000] caption" ref={textRef6}>6)</p>
           </div>
-          <div className="absolute top-[120%] left-[-10%]">
+          <div className="absolute top-[120%] left-[-4%]">
             <p className="caption" ref={textRef7}></p>
           </div>
         </div>
