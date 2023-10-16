@@ -23,14 +23,14 @@ const EventInfoSection = () => {
             <br/>
             웹 개발 스튜디오&sbquo; 영원입니다.
             <br />
-            11월의 월간 프로젝트로 창의적인 디자이너와 협업 프로젝트를 진행하려고 합니다.
+            12월의 월간 프로젝트로 창의적인 디자이너와 협업 프로젝트를 진행하려고 합니다.
             <br />
             <br />
             <span className="font-bold">❍ 참가 방식</span>
             <br />
             참가 비용 및 인원 | 무료 (1명)
             <br />
-            선발 방식 및 기간 | 추첨&sbquo; ~ 2023/10/31 23:59
+            선발 방식 및 기간 | 추첨&sbquo; ~ 2023/11/30 23:59
             <br />
             참여 조건 | <a className="underline underline-offset-[4px] decoration-1 hover:text-white" href="https://www.instagram.com/01.works">영원 인스타그램(@01.works) 팔로우</a>&sbquo; 해당 게시글
             스토리로 공유
@@ -43,7 +43,7 @@ const EventInfoSection = () => {
             첨부 파일 필수 내용 | 화면설계서 또는 디자인 산출물(figma)&sbquo;
             자세한 내용과 예시는 <a className="underline underline-offset-[4px] decoration-1 hover:text-white" href="https://free.01.works">https://free.01.works</a> 참고
             <br />
-            발표 | 2023/11/01 18:00 선정자에 한 해 개인 메일로 전달
+            발표 | 2023/12/01 18:00 선정자에 한 해 개인 메일로 전달
             <br /> 
             <br />
             <span className="font-bold">❍ 개발 방식</span>
@@ -59,7 +59,7 @@ const EventInfoSection = () => {
             <br />
             - 첨부한 파일은 영원 이벤트 외의 목적으로 절대 사용되지 않습니다.
             <br />
-            - 11월 한 달 동안만 영원 도메인으로 배포될 예정이며, 한 달 이상의 웹 사이트 운영을 원할 경우 도메인과 호스팅 비용은 개인 부담입니다.
+            - 12월 한 달 동안만 영원 도메인으로 배포될 예정이며, 한 달 이상의 웹 사이트 운영을 원할 경우 도메인과 호스팅 비용은 개인 부담입니다.
             <br/>
             - 디자인에 따라 일정이 변경될 수도 있습니다.
             <br />
